@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<style>
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #ff5733;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 720px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+h1 {
+font-family: myFirstFont;
+   src: url(sansation_bold.woff);
+   font-weight: bold;
+   text-align: center;
+   }
+.dropdown {
+    font-family: myFirstFont;
+    src: url(sansation_bold.woff);
+    text-align: center;
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+</style>
+<body>
+<h1>Denmark now</h1>
+<img src="http://www.eurojewcong.org/img/articles/638x389/16668.jpg" alt="CPH Denmark" style="width:720px;height:480px;">
+<p> </p>
+
+<button class="button" onclick="this.innerHTML=Date()">What is the time in Denmark right now?</button>
+
+<div class="dropdown">
+  <span>How about the weather?</span>
+  <div class="dropdown-content">
+    <p>Today is sunny - 10°!</p>
+  </div>
+</div>
+
+</body>
+</html>
